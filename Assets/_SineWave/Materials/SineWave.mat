@@ -29,13 +29,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 1
+    - _Amplitude: 2
     - _Glossiness: 0.5
     - _Metallic: 0
     - _Speed: 1
-    - _Wavelength: 1
+    - _Wavelength: 0.67
     m_Colors:
     - _Color: {r: 0.3254272, g: 0.5610892, b: 0.6698113, a: 1}
-    - _Direction: {r: 1, g: 0, b: 0, a: 0}
+    - _Direction: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
