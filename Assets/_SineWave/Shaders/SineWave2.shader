@@ -1,12 +1,9 @@
-Shader "SineWave"
+Shader "SineWave2"
 {
     Properties
     {
         _Color ("Color", Color) = (1,1,1,1)
-        _Amplitude ("Amplitude", Float) = 1.0
-        _Wavelength ("Wavelength", Float) = 1.0
-        _Speed ("Speed", Float) = 1.0
-        _Direction ("Direction", Vector) = (1,0,0,0)
+        _Length ("Length", Float) = 1.0
     }
     SubShader
     {
@@ -26,10 +23,7 @@ Shader "SineWave"
             #define PI 3.14159265359
 
             float4 _Color;
-            float _Amplitude;
-            float _Wavelength;
-            float _Speed;
-            float4 _Direction;
+            float _Length;
 
             struct appdata
             {
@@ -48,16 +42,8 @@ Shader "SineWave"
 
                 float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 
-                float k = 2.0 * PI / _Wavelength;
-                float phase = _Speed * k;
-
-                float2 dir = normalize(_Direction.xz);
-
-                float waveDir = dot(dir, worldPos.xz);
-
-                float wave = _Amplitude * sin(waveDir*k + _Time.y * phase);
-
-                worldPos.y += wave;
+                float waveLength = 2.0 / _Length;
+                worldPos.y += sin(worldPos.x * waveLength + _Time.y);
 
                 o.pos = mul(UNITY_MATRIX_VP, float4(worldPos,1));
                 o.worldPos = float4(worldPos, 1.0);

@@ -262,7 +262,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 773350b9e271c2047a89c1479eff1672, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5ee9dc1e5ea4d6a4ca11257ed1ffd682, type: 2}
+      objectReference: {fileID: 2100000, guid: 4c17db46367a0b048be2270f3bdb7cc1, type: 2}
     - target: {fileID: 919132149155446097, guid: 773350b9e271c2047a89c1479eff1672, type: 3}
       propertyPath: m_Name
       value: BigPlane2
